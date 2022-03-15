@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+      
+    <style>
+        body {
+            border: 2px solid green;
+            min-height: 240px;
+            text-align: center;
+        }
+  
+        h1 {
+            color: Blue;
+        }
+  
+        div {
+            display: flex;
+            justify-content: center;
+        }
+  
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+  
+<body>
+    <h1>Endterm Practical Exam</h1>
+  
+    <div id="element">
+        Hello This is the paragraph which will be hidden after u press the button 
+    </div>
+  
+    <div class="button-container">
+        <button id="click">
+            hide
+        </button>
+    </div>
+  
+    <script>
+        $('#click').on('click', function () {
+            if ($('#click').text() === 'show') {
+                $('#click').text('hide');
+                $('#element').css('display', 'flex');
+            }
+            else {
+                $('#click').text('show');
+                $('#element').css('display', 'none');
+            }
+        });
+    </script>
+</body>
+  
+</html>
